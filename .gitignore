@@ -1,2 +1,5 @@
 frontend/*.swp
 frontend/node_modules
+mountfrontend.sh
+frontend/build/output/
+*~
