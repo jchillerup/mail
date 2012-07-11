@@ -2,14 +2,14 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/header/menu.html' 
-], function($, _, Backbone, headerMenuTemplate){
-  var HeaderMenuView = Backbone.View.extend({
+  'text!templates/sidebar/menu.html' 
+], function($, _, Backbone, sidebarTemplate){
+  var SidebarView = Backbone.View.extend({
     el: '.main-menu-container',
     intialize: function () {
     },
     render: function () {
-      $(this.el).html(headerMenuTemplate);
+      $(this.el).html(sidebarTemplate);
       $('a[href="' + window.location.hash + '"]').addClass('active');
     },
     events: {
@@ -21,5 +21,5 @@ define([
     }
   })
 
-  return HeaderMenuView;
+  return SidebarView;
 });
